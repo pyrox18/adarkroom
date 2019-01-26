@@ -14,6 +14,30 @@ var combatKeys = {
     'thrust' : {
         'keyCode' : 114,
         'text' : '[R]'
+    },
+    'eat': {
+        'keyCode': 49,
+        'text': '[1]'
+    },
+    'meds': {
+        'keyCode': 50,
+        'text': '[2]'
+    },
+    'shoot': {
+        'keyCode': 97,
+        'text': '[A]'
+    },
+    'blast': {
+        'keyCode': 115,
+        'text': '[S]'
+    },
+    'lob': {
+        'keyCode': 100,
+        'text': '[D]'
+    },
+    'tangle': {
+        'keyCode': 102,
+        'text': '[F]'
     }
 }
 
@@ -35,6 +59,24 @@ function bindCombatKeys() {
             case combatKeys.thrust.keyCode:
                 console.log("Button " + combatKeys.thrust.text + " pressed");
                 $("#attack_bayonet").trigger("click");
+                break;
+            case combatKeys.eat.keyCode:
+                $("#eat").trigger("click");
+                break;
+            case combatKeys.meds.keyCode:
+                $("#meds").trigger("click");
+                break;
+            case combatKeys.shoot.keyCode:
+                $("#attack_rifle").trigger("click");
+                break;
+            case combatKeys.blast.keyCode:
+                $("#attack_laser-rifle").trigger("click");
+                break;
+            case combatKeys.lob.keyCode:
+                $("#attack_grenade").trigger("click");
+                break;
+            case combatKeys.tangle.keyCode:
+                $("#attack_bolas").trigger("click");
                 break;
         }
     })
