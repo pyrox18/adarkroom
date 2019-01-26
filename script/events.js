@@ -230,7 +230,7 @@ var Events = {
 
 		var btn = new Button.Button({
 			id: 'eat',
-			text: _('eat meat'),
+			text: _('eat meat ' + combatKeys.eat.text),
 			cooldown: cooldown,
 			click: Events.eatMeat,
 			cost: { 'cured meat': 1 }
@@ -250,7 +250,7 @@ var Events = {
 
 		var btn = new Button.Button({
 			id: 'meds',
-			text: _('use meds'),
+			text: _('use meds ' + combatKeys.meds.text),
 			cooldown: cooldown,
 			click: Events.useMeds,
 			cost: { 'medicine': 1 }
@@ -273,7 +273,7 @@ var Events = {
 		}
 		var btn = new Button.Button({
 			id: 'attack_' + weaponName.replace(' ', '-'),
-			text: weapon.verb,
+			text: weapon.verb + ' ' + combatKeys[weapon.verb].text,
 			cooldown: cd,
 			click: Events.useWeapon,
 			cost: weapon.cost
