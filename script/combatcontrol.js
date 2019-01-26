@@ -17,11 +17,11 @@ var combatKeys = {
     },
     'eat': {
         'keyCode': 49,
-        'text': '[1]'
+        'text': '[num 1]'
     },
     'meds': {
         'keyCode': 50,
-        'text': '[2]'
+        'text': '[num 2]'
     },
     'shoot': {
         'keyCode': 97,
