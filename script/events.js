@@ -530,7 +530,6 @@ var Events = {
 		Events.fought = true;
 		clearTimeout(Events._enemyAttackTimer);
 		Events.removePause($('#pause'), 'end');
-		unbindCombatKeys();
 	},
 
 	winFight: function() {
@@ -1097,6 +1096,7 @@ var Events = {
 			// Force refocus on the body. I hate you, IE.
 			$('body').focus();
 		});
+		unbindCombatKeys();
 	},
 
 	handleStateUpdates: function(e){
