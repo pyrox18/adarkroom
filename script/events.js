@@ -138,6 +138,8 @@ var Events = {
 
 		// Set up the enemy attack timer
 		Events._enemyAttackTimer = Engine.setInterval(Events.enemyAttack, scene.attackDelay * 1000);
+
+		bindCombatKeys();
 	},
 
 	setPause: function(btn, state){
@@ -528,6 +530,7 @@ var Events = {
 		Events.fought = true;
 		clearTimeout(Events._enemyAttackTimer);
 		Events.removePause($('#pause'), 'end');
+		unbindCombatKeys();
 	},
 
 	winFight: function() {
